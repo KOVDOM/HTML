@@ -1,0 +1,9 @@
+body{
+    background-image:url('https://www.estidia.eu/wp-content/uploads/2018/04/Savin-NY-Website-Background-Web.jpg');
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-attachment: fixed;
+}
+
+#isInStock{
+    width: 5px;
+}

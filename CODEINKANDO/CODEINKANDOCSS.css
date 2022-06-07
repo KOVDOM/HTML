@@ -1,0 +1,57 @@
+body {
+    background-image: url("https://itlawyersbrisbane.com.au/wp-content/uploads/2019/11/ITLB_B_BG-2.png");
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-attachment: fixed;
+  }
+
+li:hover{
+  color: azure;
+  background-color: red;
+}
+
+.lista{
+  list-style: square;
+}
+
+#terkep1{
+  width: 100px;
+  height: 300px;
+}
+
+#felGomb {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99; 
+  border: none;
+  outline: none;
+  background-color: lightseagreen;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px; 
+}
+
+#fekete{
+  color: black;
+}
+
+h4{
+  display: flex;
+  justify-content: space-between;
+  font-size: 100%;
+}
+
+.kozep {
+  margin-left: 18%;
+  font-size: 20px;
+}
+
+.kode{
+  background-color: black;
+  color: aliceblue;
+}
+
+code{
+  color: aliceblue;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
+<script src="http://code.jquery.com/ui/1.7.0/jquery-ui.js" ></script>
+    <script src="../2022_04_21/idojarasjava.js"></script>
+    
+    <title>Időjárás</title>
+</head>
+
+
+
+<body> 
+    <div class="card" style="width: 10rem;">
+        <h6 id="text1"></h6>
+        <img class="card-img-top" id="img1" src="" alt="" title="">
+        <div class="card-body">
+          <p class="card-text">További részletek...</p>
+        
+        </div>
+      </div>
+</body>
+<script>
+
+    console.log(data);
+    console.log('1.Hány fok van?');
+  var fok=console.log(data.main.temp);
+    console.log('2.Melyik ország adatait látjuk?');
+    console.log(data.sys.country);
+    console.log('3.Milyen irányba fúj a szél?');
+    console.log(data.wind.deg);
+
+  var varos=console.log(data.name);
+
+
+  function getWeather(callback) {
+            var weather = 'http://api.openweathermap.org/data/2.5/weather?q=Miskolc&appid=15d17ce5384d5d7a43a97af40fc78181&units=metric&lang=hu';
+            $.ajax({
+              dataType: "json",
+              url: weather,
+              success: callback
+            });
+        }
+
+      
+getWeather(function (data) {
+    var icon=data.weather[0].icon;
+document.getElementById('img1').src="http://openweathermap.org/img/wn/"+icon+"@2x.png";
+document.getElementById('img1').alt=data.weather[0].description;
+document.getElementById('img1').title=data.weather[0].description;
+document.getElementById('text1').innerHTML=data.name+'<br>'+Math.round(data.main.temp)+" C°";
+});
+
+</script>
+</html>

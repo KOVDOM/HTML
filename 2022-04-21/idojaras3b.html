@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
+    <script src="http://code.jquery.com/ui/1.7.0/jquery-ui.js" ></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="idojaras3b.css">
+    <script src="idojaras3b.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getWeather(callback) {
+            //var weather = 'http://api.openweathermap.org/data/2.5/onecall?lat=48.1&lon=20.7833&appid=15d17ce5384d5d7a43a97af40fc78181&units=metric&exclude=currentminutelydailyalerts&lang=hu';
+            var weather = 'https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=48.1&lon=20.7833&appid=15d17ce5384d5d7a43a97af40fc78181&dt=1650864600&units=metric&lang=hu'
+            $.ajax({
+              dataType: "json",
+              url: weather,
+              success: callback
+            });
+        }
+
+        getWeather(function(data){
+            console.log(data)
+            var oszlopok=document.getElementsByClassName("oszlop");
+            var aktido=new Date();
+            let ora=aktido.getHours();
+            for(let i=0;i<oszlopok.length;i++)
+            {
+                oszlopok[i].getElementsByClassName("ora")[0].innerHTML=(ora++)+":00";
+                let ikon=data.hourly[i].weather[0].icon;
+                oszlopok[i].getElementsByClassName("ikon")[0].src="http://openweathermap.org/img/wn/"+ikon+"@2x.png";
+                let ho=Math.round(data.hourly[i].temp);
+                var eso=0;
+                try{
+                    eso=data.hourly[i].rain["1h"]*100;
+                    console.log(eso);
+                }catch(e){
+                    eso=0;
+                    console.log(eso);
+                }
+                //oszlopok[i].getElementsByClassName("ikon")[0].src="http://openweathermap.org/img/wn/"+ikon+"@2x.png";
+                oszlopok[i].getElementsByClassName("grafikon")[0].innerHTML=ho+" C°";
+                oszlopok[i].getElementsByClassName("grafikon")[0].style.height=(ho*3+10)+"%";
+                oszlopok[i].getElementsByClassName("eso")[0].style.height=eso+"px";
+            }
+    });
+    </script>
+        <div class="oszlop">
+            <div class="ora"></div>
+            <img src="" alt="" class="ikon">
+            <div class="grafikon"></div><div class="eso"></div></div>
+        </div>
+        <div class="oszlop">
+            <div class="ora"></div>
+            <img src="" alt="" class="ikon">
+            <div class="grafikon"></div><div class="eso"></div></div>
+        </div>
+        <div class="oszlop">
+            <div class="ora"></div>
+            <img src="" alt="" class="ikon">
+            <div class="grafikon"></div><div class="eso"></div></div>
+        </div>
+        <div class="oszlop">
+            <div class="ora"></div>
+            <img src="" alt="" class="ikon">
+            <div class="grafikon"></div><div class="eso"></div></div>
+        </div>
+        <div class="oszlop">
+            <div class="ora"></div>
+            <img src="" alt="" class="ikon">
+            <div class="grafikon"></div><div class="eso"></div></div>
+        </div>
+        <div class="oszlop">
+            <div class="ora"></div>
+            <img src="" alt="" class="ikon">
+            <div class="grafikon"></div><div class="eso"></div></div>
+        </div>
+        <div class="oszlop">
+            <div class="ora"></div>
+            <img src="" alt="" class="ikon">
+            <div class="grafikon"></div><div class="eso"></div></div>
+        </div>
+        <div class="oszlop">
+            <div class="ora"></div>
+            <img src="" alt="" class="ikon">
+            <div class="grafikon"></div><div class="eso"></div></div>
+        </div>
+        <div class="oszlop">
+            <div class="ora"></div>
+            <img src="" alt="" class="ikon">
+            <div class="grafikon"></div><div class="eso"></div></div>
+        </div>
+        <div class="oszlop">
+            <div class="ora"></div>
+            <img src="" alt="" class="ikon">
+            <div class="grafikon"></div><div class="eso"></div></div>
+        </div>
+        <!--div class="oszlop">
+            <div class="ora"></div><div class="eso"></div></div>
+            <img src="" alt="" class="ikon">
+            <div class="grafikon"></div>
+        </div>
+        <div class="oszlop">
+            <div class="ora"></div>
+            <img src="" alt="" class="ikon">
+            <div class="grafikon"></div><div class="eso"></div></div-->
+        </div>
+</body>
+</html>

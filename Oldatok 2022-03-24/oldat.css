@@ -1,0 +1,96 @@
+body {
+	background-image: url("minta.jpg");
+	background-size: cover;
+	font-family: sans-serif;
+}
+
+#tartalom {
+	width: 80%;
+	margin: auto;
+}
+
+h1 {
+	border-bottom: 8px dashed teal;
+	font-variant: small-caps;
+	letter-spacing: 3px;
+}
+
+h2{
+	color: teal;
+}
+
+p,
+li {
+	text-align: justify;
+}
+
+#kep {
+	border: 10px outset teal;
+}
+
+#keplet {
+	width: 500px;
+	margin: auto;
+	padding: 10px;
+	background-color: teal;
+	color: white;
+	text-align: center;
+	font-style: italic;
+}
+
+input {
+	background-color: teal;
+	color: white;
+	font-weight: bold;
+	font-family: sans-serif;
+	padding: 5px;
+	width: 90px;
+}
+
+#megoldas {
+	font-weight: bold;	
+	color: teal;
+	padding: 5px;
+}
+
+.megoldas {
+	font-weight: bold;
+	background-color: teal;
+	color: white;
+	font-weight: bold;
+	font-family: sans-serif;
+	padding: 5px;
+	width: 90px;	
+}
+
+#forras {
+	font-weight:bold;
+	float:right;
+	font-style: italic;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	text-shadow: 1px 1px 0px white;
+}
+
+li {
+	list-style-image: url('lombik.png');
+  }
+
+.oldat{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.card-tile{
+	color: teal;
+	background-color: gray;
+	border-bottom: 1px solid grey;
+	font-weight: bold;
+}
+
+#csuszka{
+	width:100%;
+}

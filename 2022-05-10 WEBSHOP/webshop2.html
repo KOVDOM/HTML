@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webshop2.css">
+    <script src="webshop2.js"></script>
+    <title>Webshop</title>
+</head>
+<body>
+    <div id="tartalom">
+        <!--form class="doboz">
+            <div class="marka">
+                Trek
+            </div>
+            <div class="tipus">
+                Országúti
+            </div>
+            <div class="evjarat">
+                2021
+            </div>
+            <div class="ar">
+                3000 €
+            </div>
+            <input type="button" class="szerkesztes" value="Szerkesztés"><br>
+            <input type="button" class="torles" value="Törlés">
+        </form>
+        <form class="doboz">
+            <div class="marka">
+                Cervelo
+            </div>
+            <div class="tipus">
+                Országúti
+            </div>
+            <div class="evjarat">
+                2020
+            </div>
+            <div class="ar">
+                3500 €
+            </div>
+            <input type="button" class="szerkesztes" value="Szerkesztés"><br>
+            <input type="button" class="torles" value="Törlés">
+        </form>
+        <form class="doboz">
+            <div class="marka">
+                Colnago
+            </div>
+            <div class="tipus">
+                Országúti
+            </div>
+            <div class="evjarat">
+                2022
+            </div>
+            <div class="ar">
+                5000 €
+            </div>
+            <input type="button" class="szerkesztes" value="Szerkesztés"><br>
+            <input type="button" class="torles" value="Törlés">
+        </form-->
+        
+    </div>
+    <form class="doboz">
+            Márka:<input type="text" id="id" hidden><br>
+            Márka:<input type="text" id="marka" name="marka"><br>
+            Típus:<input type="text" id="tipus" name="tipus"><br>
+            Évjárat:<input type="number" id="evjarat" name="evjarat"><br>
+            Ár:<input type="number" id="ar" name="ar"><br>
+            <input type="button" class="uj" id="uj" value="Bevitel">
+            <input id="modosit" type="button" onclick="szerkeszteshez(doboz)" value="modosit">
+        </form>
+        <div id="edit-product">
+        </div>
+</body>
+</html>

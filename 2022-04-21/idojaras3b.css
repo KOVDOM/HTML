@@ -1,0 +1,37 @@
+.oszlop{
+    width: 50px;
+    height: 300px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    border: solid 1px black;
+    position: relative;
+    float: left;
+}
+
+.ikon{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.grafikon{
+    background-color: gainsboro;
+    border-radius: 10px 10px 0px 0px;
+    width: 50px;
+    height: 30%;
+    position: absolute;
+    bottom: 0%;
+    display: block;
+    padding-top: 10px;
+}
+
+.eso{
+    background-color:aqua;
+  
+    width:50px;
+    height: 30%;
+    position: absolute;
+    bottom: 0%;
+    display: block;
+}

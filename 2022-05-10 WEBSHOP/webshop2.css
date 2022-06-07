@@ -1,0 +1,19 @@
+.doboz{
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: black;
+    padding: 10px;
+    margin: 10px;
+    float: left;
+    width:200px;
+}
+
+.marka{
+    font-weight: bold;
+}
+
+.uj{background-color: aqua;}
+.torles{background-color: black;
+color: cornsilk;
+}
+.szerkesztes{background-color: chocolate;}
